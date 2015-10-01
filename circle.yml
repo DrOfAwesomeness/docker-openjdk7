@@ -7,6 +7,10 @@ dependencies:
     - docker info
     - ./build.sh
 
+test:
+  override:
+    - docker run -d drawesome/openjdk7 /bin/true; sleep 5
+
 deployment:
   hub:
     branch: master
